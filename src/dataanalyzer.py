@@ -5,11 +5,16 @@ from pandas.core.interchange.dataframe_protocol import DataFrame
 class DataAnalyzer:
     def __init__(self,table: DataFrame):
         self.df=table
+        '''
+        Agreed how many of each category there are
+        '''
     def sum_of_category(self):
         print(self.df['Biased'].value_counts())
         print(f"{self.df['Biased'].value_counts().sum()}")
-
-    def len_of_category(self):
+        '''
+        Average of categories
+        '''
+    def Average_len_of_category(self):
         antisemit = 0
         count_of_antisemit = 0
         no_antisemit = 0
@@ -25,7 +30,9 @@ class DataAnalyzer:
         print("antisemit:", antisemit / count_of_antisemit)
         print("no_antisemit:", no_antisemit / count_of_no_antisemit)
         print((antisemit + no_antisemit) / (count_of_antisemit + count_of_no_antisemit))
-
+        '''
+        3 longest in each category
+        '''
         def longest_text():
             tweets_dict_antisemit = {}
             tweets_dict_no_antisemit = {}

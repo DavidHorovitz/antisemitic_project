@@ -1,0 +1,1 @@
+This project receives a dataframe, performs queries on it, cleans it, and returns the perfect result.

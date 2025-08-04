@@ -11,11 +11,15 @@ class Cleaner:
     def new_df(self):
         self.new_df=self.df[['Text','Biased']]
         return self.new_df
-
+    '''
+    Removes punctuation marks
+    '''
     def replaiser(self):
         self.new_df['Text'] = self.new_df['Text'].str.replace(",", " ")
         return self.new_df
-
+    '''
+    Converts to lowercase
+    '''
     def convert_tu_lower(self):
         self.new_df['Text']=self.new_df['Text'].str.lower()
         return self.new_df

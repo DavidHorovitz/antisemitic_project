@@ -4,7 +4,9 @@ import pandas as pd
 
 
 class Loader:
-
+    '''
+    loading the file
+    '''
     def loader(self):
         df = pd.read_csv("tweets_dataset.csv")
         return df
